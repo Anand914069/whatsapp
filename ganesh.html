@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #ff9900;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+}
+
+.main-image, .highlight-image, .procession-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.highlight {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.procession-image {
+    border: 5px solid #ff9900;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+#about, #celebration, #procession {
+    animation: fadeIn 2s ease-in;
+}
+
+.highlight {
+    animation: slideIn 1s ease-in;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh Chaturthi Celebration</title>
+   
+</head>
+<body>
+    <header>
+        <h1>Ganesh Chaturthi Celebration</h1>
+    </header>
+
+    <section id="intro">
+        <img src="g.gif" alt="Ganesh" class="main-image">
+        <video controls>
+            <source src="videos/ganesh-chaturthi.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section id="about">
+        <h2>About Ganesh Chaturthi</h2>
+        <p>Ganesh Chaturthi is a Hindu festival celebrating the birth of the god Ganesha. It is marked by vibrant celebrations, prayers, and cultural activities.</p>
+    </section>
+
+    <section id="celebration">
+        <h2>Celebration Highlights</h2>
+        <div class="highlight">
+            <img src="gg.jpg" alt="Celebration" class="highlight-image">
+            <p>Join us for the grand celebration featuring music, dance, and traditional rituals.</p>
+        </div>
+        <div class="highlight">
+            <img src="gggg.jpg" alt="Ritual" class="highlight-image">
+            <p>Participate in various rituals and cultural performances.</p>
+        </div>
+        <video controls>
+            <source src="videos/celebration-highlights.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section id="procession">
+        <h2>Procession Highlights</h2>
+        <img src="g.gif" alt="Procession" class="procession-image">
+    </section>
+
+    <footer>
+        <p>© 2024 Ganesh Chaturthi Festival</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scroll to sections
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector(link.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Optional: Add more interactivity as needed
+    // For example, you could add a lightbox effect for images or a slideshow
+});
+
+    </script>
+</body>
+</html>
